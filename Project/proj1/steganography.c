@@ -65,10 +65,10 @@ int main(int argc, char **argv)
 {
 	if (argc != 2)
 		return -1;
-	Image * image = readData(argv[1]);
+	Image *image = readData(argv[1]);
 	if (image == NULL)
 		return -1;
-	Image* new_image = steganography(image);
+	Image *new_image = steganography(image);
 	freeImage(image);
 	writeData(new_image);
 	freeImage(new_image);
